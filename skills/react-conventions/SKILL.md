@@ -1,9 +1,9 @@
 ---
-name: front-structure
+name: react-conventions
 description: Enforces frontend structure and conventions. Invoke before creating, moving, renaming, editing, or reviewing frontend files, components, hooks, services, utilities, models, constants, config, pages, routes, exports, styling, or component APIs. Also invoke for placement, naming, responsibility boundaries, architecture, generated/imported component normalization, and frontend refactor decisions.
 ---
 
-# Front Structure
+# React Conventions
 
 ## Quick Start
 
@@ -36,15 +36,15 @@ Use named exports only. Do not use default exports. Place exports at the end of 
 Separate runtime exports from type exports with one empty line:
 
 ```ts
-type HexString = `#${string}`
+type HexString = `#${string}`;
 
 function convertToHex(value: string): HexString {
-  return `#${value}`
+  return `#${value}`;
 }
 
-export type { HexString }
+export type { HexString };
 
-export { convertToHex }
+export { convertToHex };
 ```
 
 ## React Components
@@ -80,10 +80,10 @@ For every component kind, order destructured props as `children`, `className`, o
 ```tsx
 function ComponentName({
   children = null,
-  className = '',
-  classNameD = '',
-  classNameJ = '',
-  id = '',
+  className = "",
+  classNameD = "",
+  classNameJ = "",
+  id = "",
   propK = Status.PENDING,
   propV = false,
   ...otherProps
@@ -104,13 +104,13 @@ When destructuring component props with a rest spread, name the rest value `othe
 
 ```tsx
 function ComponentName({ asChild = false, ...otherProps }: ComponentNameProps) {
-  const Comp = asChild ? Slot.Root : 'div'
+  const Comp = asChild ? Slot.Root : "div";
 
-  return <Comp {...otherProps} />
+  return <Comp {...otherProps} />;
 }
 
 function ComponentName(props: ComponentNameProps) {
-  return <div {...props} />
+  return <div {...props} />;
 }
 ```
 
@@ -130,9 +130,9 @@ Use `component-name.ui.tsx` for the component or component family. Use `componen
 Example:
 
 ```ts
-import { cva, type VariantProps } from 'cva'
+import { cva, type VariantProps } from "cva";
 
-const buttonVariants = cva('...', {
+const buttonVariants = cva("...", {
   variants: {
     variant: {
       default: `
@@ -143,41 +143,41 @@ const buttonVariants = cva('...', {
       icon: `size-8`,
     },
   },
-})
+});
 
-type ButtonVariants = VariantProps<typeof buttonVariants>
+type ButtonVariants = VariantProps<typeof buttonVariants>;
 
-export type { ButtonVariants }
+export type { ButtonVariants };
 
-export { buttonVariants }
+export { buttonVariants };
 ```
 
 Constants with only Tailwind classes use `tw()`:
 
 ```ts
-import { tw } from '@/utils/styles/tw.util'
+import { tw } from "@/utils/styles/tw.util";
 
 // Don't:
 const styles = `
   mx-auto
   flex
   items-center
-`
+`;
 
 // Do:
 const styles = tw(`
   mx-auto
   flex
   items-center
-`)
+`);
 ```
 
 Folder `index.ts` is the public import surface. Use wildcard re-exports with `export type *` and `export *` from the UI file. Do not list individual exports.
 
 ```ts
-export type * from './component-name.ui'
+export type * from "./component-name.ui";
 
-export * from './component-name.ui'
+export * from "./component-name.ui";
 ```
 
 Consumers import from the folder path, e.g. `@/components/ui/component-name`. Internal files import relatively, e.g. `./component-name.styles`.

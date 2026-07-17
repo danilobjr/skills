@@ -40,7 +40,7 @@ ln -s .agents/skills/caveman /path/to/your/skills/caveman
 Ask your agent to use an installed skill by name. For example:
 
 ```text
-Apply front-structure skill on @src/components/ui/button.tsx
+Apply react-conventions skill on @src/components/ui/button.tsx
 ```
 
 Some tools can invoke skills automatically from their descriptions. Invocation syntax and automatic discovery vary by tool.
