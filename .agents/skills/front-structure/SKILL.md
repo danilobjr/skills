@@ -1,6 +1,6 @@
 ---
 name: front-structure
-description: Enforces frontend codebase file/folder structure, strict file suffixes, naming conventions, export style, and responsibility boundaries. Use when creating, moving, renaming, or reviewing files, components, hooks, services, utilities, models, constants, config, pages, routing, styling, or frontend architecture conventions.
+description: Enforces frontend structure and conventions. Invoke before creating, moving, renaming, editing, or reviewing frontend files, components, hooks, services, utilities, models, constants, config, pages, routes, exports, styling, or component APIs. Also invoke for placement, naming, responsibility boundaries, architecture, generated/imported component normalization, and frontend refactor decisions.
 ---
 
 # Front Structure
