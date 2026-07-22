@@ -1,39 +1,25 @@
 # My Agent Skills
 
-Personal collection of reusable skills for Agent Skills-compatible tools.
+[![skills.sh](https://skills.sh/b/danilobjr/skills)](https://skills.sh/danilobjr/skills)
 
-## Skills
-
-| Skill                                                        | Purpose                                                                                    |
-| ------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
-| [`caveman`](.agents/skills/caveman/SKILL.md)                 | Keeps answers terse while preserving technical substance.                                  |
-| [`commit`](.agents/skills/commit/SKILL.md)                   | Plans and prepares safe, focused Git commits.                                              |
-| [`front-structure`](.agents/skills/front-structure/SKILL.md) | Enforces frontend folders/files structure, naming, exports, and responsibility boundaries. |
-| [`handoff`](.agents/skills/handoff/SKILL.md)                 | Captures session context in to a file for another agent to continue.                       |
-
-## Structure
-
-Each skill lives in its own directory:
-
-```text
-.agents/skills/<skill-name>/SKILL.md
-```
+My personal collection of reusable agent skills – compatible with any agent harness.
 
 ## Install
 
-Just copy whatever skill content you want directly from GitHub repository and paste into the skills path supported by your tool. Or clone this repo locally and copy using terminal:
+Run the following command on your terminal and choose which skills you want:
 
 ```sh
-cp -R .agents/skills/caveman /path/to/your/skills/
+npx skills@latest add danilobjr/skills
 ```
 
-Or symlink it to keep the installed skill synced with this repository:
+## Skills
 
-```sh
-ln -s .agents/skills/caveman /path/to/your/skills/caveman
-```
-
-**Note**: _Consult your tool's documentation for its skills path and discovery rules._
+| Skill                                                  | Purpose                                                                                    |
+| ------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| [`caveman`](./skills/caveman/SKILL.md)                 | Keeps answers terse while preserving technical substance.                                  |
+| [`commit`](./skills/commit/SKILL.md)                   | Plans and prepares safe, focused Git commits.                                              |
+| [`front-structure`](./skills/front-structure/SKILL.md) | Enforces frontend folders/files structure, naming, exports, and responsibility boundaries. |
+| [`handoff`](./skills/handoff/SKILL.md)                 | Captures session context in to a file for another agent to continue.                       |
 
 ## Usage
 
