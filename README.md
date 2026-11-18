@@ -20,6 +20,7 @@ npx skills@latest add danilobjr/skills
 | [`commit`](./skills/commit/SKILL.md)                   | Plans and prepares safe, focused Git commits.                                              |
 | [`front-structure`](./skills/front-structure/SKILL.md) | Enforces frontend folders/files structure, naming, exports, and responsibility boundaries. |
 | [`handoff`](./skills/handoff/SKILL.md)                 | Captures session context in to a file for another agent to continue.                       |
+| [`save-plan`](./skills/save-plan/SKILL.md)             | Saves an execution plan verbatim to a timestamped Markdown file.                           |
 
 ## Usage
 
